@@ -1,10 +1,9 @@
-// 导出方法 不实现具体功能
+//导出方法,先不实现功能
 
 export {
-    reactive,
-    shallowReactive,
-    readonly,
-    shallowReadonly
-} from './reactive'
+    reactive, shallowReactive, shallowReadonly, readonly
+} from './reactivity'
 
-export {effect} from './effect'
+export {
+    effect
+} from './effect'
