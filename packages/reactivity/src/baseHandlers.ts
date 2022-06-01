@@ -67,6 +67,7 @@ function createSetter(shallow = false) {
 
         const hadKey = isArray(target) && isIntegerKey(key) ? Number(key) < target.length : hasOwn(target, key)
 
+        //执行触发更新
         if (!hadKey) {
             //新增
             trigger(target, TriggerOpTypes.ADD, key, value)
@@ -76,7 +77,6 @@ function createSetter(shallow = false) {
         }
 
         const res = Reflect.set(target, key, value, receiver)
-        //执行触发更新
 
         return res
     }
